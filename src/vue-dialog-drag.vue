@@ -280,9 +280,9 @@ export default {
         this.drag = (this.options.pinned) ? false : this.drag
         // available options
         let ops = this.availableOptions
-        for (let op of ops) {
-          if (this.options.hasOwnProperty(op)) {
-            this.$set(this, op, this.options[op])
+        for (let op in ops) {
+          if (options.hasOwnProperty(ops[op])) {
+            this.$set(this, ops[op], options[ops[op]])
           }
         }
       }
